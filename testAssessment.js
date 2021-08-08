@@ -12,7 +12,7 @@ function radioButtonLoop(){
 	var operation = 6; //operation section has 8 questions
 
 	//loop to create 8 arrays for self-awareness 8 questions to put 10 arrays of radio buttons
-	for (var a = 1; a <= 8; a++) 
+	for (var a = 1; a <= 8; a++)
 	{
 		//creating 10 arrays per 1 question
 		selfAware[a] = [];
@@ -21,6 +21,7 @@ function radioButtonLoop(){
 			selfAware[a] += '<input type="radio" value="' + i + '" name="selfAwareQ' + a + '" class="floatBlock">' + i;
 			//document.getElementById("radioLoop").innerHTML = selfAware[5];
 		}
+		//prints the code from js to html under selfAwQ
 		document.getElementById("selfAwQ" + a).innerHTML = selfAware[a];
 	}
 }
@@ -35,6 +36,7 @@ function check() {
 	for (var i = 1; i <=8; i++)
 	{
 		selected =  Array.from(document.getElementsByName("selfAwareQ" + i)).find(radio => radio.checked);
+		//gets the value of each radio button and add them all up
 		selfAwareTotal += parseInt(selected.value);
 		document.getElementById("result").textContent = "SelfAwareTotal is " +  selfAwareTotal;
 	}
@@ -45,7 +47,7 @@ function check() {
 	{
 		document.getElementById("result").style.color = "red";
 	}
-	else if (selfAwareTRQ > 2.99 && selfAwareTRQ <= 3.99) 
+	else if (selfAwareTRQ > 2.99 && selfAwareTRQ <= 3.99)
 	{
 		document.getElementById("result").style.color = "orange";
 	}
