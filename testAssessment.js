@@ -55,5 +55,4 @@ function check() {
 	{
 		document.getElementById("result").style.color = "green";
 	}
-
 }

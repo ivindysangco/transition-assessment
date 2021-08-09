@@ -4,7 +4,7 @@
   box-sizing:border-box;
 }
 body{
-  font-family: monospace;
+  font-family: sans-serif;
 }
 section{
   min-height: 100vh;
@@ -12,10 +12,10 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aliceblue;
+  background-color: #FCFAEA;
 }
 .container{
-  width: 90%;
+  width: 50%;
   max-width: 400%;
   background-color: white;
   box-shadow: 0px 0px 20px #00000020;
@@ -28,19 +28,24 @@ section{
 .step.active{
   display: block;
 }
+/*this is the settings for input line labels*/
 .form-group{
   width: 100%;
-  margin-top: 20px;
+  margin-top: 0px;
 }
+/*this is the settings for input line boxes*/
 .form-group input{
   width: 100%;
   border: 1.5px solid rgba(128, 128, 128, 0.418);
   padding: 5px;
-  font-size: 18px;
+  font-size: 15px;
   margin-top: 5px;
   border-radius: 4px;
 }
-button.next-btn{
+/*this is the settings for buttons*/
+button.next-btn,
+button.previous-btn,
+button.submit-btn{
   float: right;
   margin-top: 20px;
   padding: 10px 30px;
@@ -48,4 +53,36 @@ button.next-btn{
   outline: none;
   background-color: rgb(180, 220, 255);
   font-family: monospace;
+  font-size: 13px;
+  cursor: pointer;
 }
+/*
+button.previous-btn{
+  float: left;
+}
+*/
+.radio-btn {
+  margin: 0 0 0 0;
+  margin-right: 0;
+  margin-left: 30px;
+}
+.questions-group{
+  margin-top: 50px;
+}
+/*this is the settings for section title*/
+.section p{
+  font-size: 20px;
+  text-align: center;
+}
+.questions p{
+  font-size: 15px;
+}
+/*
+.result-area p{
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+*/

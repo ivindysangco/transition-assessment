@@ -25,15 +25,89 @@
             <label for="email">Email</label>
             <input type="text" id="email" name="email">
           </div>
-          <button type="button" class="next-btn">Next</button>
-        </div>
 
+          <div class="questions-group">
+            <div class="section">
+              <p>Self-awareness Area of Focus</p>
+            </div>
+            <div class="questions">
+              <p>Objective <br>
+          			I have clearly defined what TRANSITION means to me - both personally and professionally:
+              </p>
+              <div class="radio-btn" >
+                 <div id="selfAwQ1"></div>
+              </div>
+          	</div>
+            <div class="questions">
+              <p>Desired End State <br>
+          		I can clearly describe what successful TRANSITION looks and feels like:
+              </p>
+              <div class="radio-btn" >
+                 <div id="selfAwQ2"></div>
+              </div>
+          	</div>
+            <div class="questions">
+              <p>Self-Reflection <br>
+          		I have a clear sense of who I am and what really matters to me - both personally and professionally:
+              </p>
+              <div class="radio-btn" >
+                 <div id="selfAwQ3"></div>
+              </div>
+          	</div>
+            <div class="questions">
+              <p>EQ <br>
+          		I am able to use emotional information in an effective and meaningful way:
+              </p>
+              <div class="radio-btn" >
+                 <div id="selfAwQ4"></div>
+              </div>
+          	</div>
+            <div class="questions">
+              <p>Strengths and Spiritual Wellness <br>
+          		I have identified my talents, my strengths, and the problems I want to solve in the future:
+              </p>
+              <div class="radio-btn" >
+                 <div id="selfAwQ5"></div>
+              </div>
+          	</div>
+            <div class="questions">
+              <p>Values <br>
+            		I have a clear understanding of my personal values to guide my decision making:
+              </p>
+              <div class="radio-btn" >
+                 <div id="selfAwQ6"></div>
+              </div>
+          	</div>
+            <div class="questions">
+              <p>Priorities<br>
+          		I have developed a personal decision matrix of both personal and professional priorities to guide my decision making:
+              </p>
+              <div class="radio-btn" >
+                 <div id="selfAwQ7"></div>
+              </div>
+          	</div>
+            <div class="questions">
+              <p>I have identified the expectations I have for my actions and those who I chose to spend time with:
+              </p>
+              <div class="radio-btn" >
+                 <div id="selfAwQ8"></div>
+              </div>
+          	</div>
+          </div>
+          <div class="result-area">
+            <p id="result"></p>
+          </div>
+          <button type="button" class="submit-btn" onclick="check()">Submit</button>
+        </div>
+<!--
         <div class="step step-2">
           <p>Self-awareness Area of Focus</p>
         	<p>Objective <br>
         			I have clearly defined what TRANSITION means to me - both personally and professionally:
         	</p>
-    			<div id="selfAwQ1"></div>
+          <div class="radio-btn" >
+    			   <div id="selfAwQ1"></div>
+          </div>
           <button type="button" class="previous-btn">Prev</button>
           <button type="button" class="next-btn">Next</button>
       	</div>
@@ -43,14 +117,16 @@
         	<p>Title of the Question <br>
         			This is the question
         	</p>
-      		  <!-- This is where the radio buttons are posted -->
+
+
             <div id="selfAwQ1"></div>
       	  <button type="button" class="previous-btn">Prev</button>
           <button type="button" class="submit-btn">Submit</button>
       	</div>
-
+-->
       </form>
     </div>
   </section>
+  <script src="main.js"></script>
 </body>
 </html>
