@@ -15,7 +15,7 @@ section{
   background-color: #FCFAEA;
 }
 .container{
-  width: 50%;
+  width: 60%;
   max-width: 400%;
   background-color: white;
   box-shadow: 0px 0px 20px #00000020;
@@ -43,8 +43,6 @@ section{
   border-radius: 4px;
 }
 /*this is the settings for buttons*/
-button.next-btn,
-button.previous-btn,
 button.submit-btn{
   float: right;
   margin-top: 20px;
@@ -52,7 +50,18 @@ button.submit-btn{
   border: none;
   outline: none;
   background-color: rgb(180, 220, 255);
-  font-family: monospace;
+  font-family: sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+button.dl-btn{
+  float: left;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  background-color: aquamarine;
+  font-family: sans-serif;
   font-size: 13px;
   cursor: pointer;
 }

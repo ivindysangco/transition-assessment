@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale = 1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
 </head>
 <body>
   <section>
@@ -21,73 +24,62 @@
             <label for="lastName">Last Name</label>
             <input type="text" id="lastName" name="lastName">
           </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email">
-          </div>
 
           <div class="questions-group">
-            <div class="section">
+            <div  id="section_title" class="section">
               <p>Self-awareness Area of Focus</p>
             </div>
             <div class="questions">
-              <p>Objective <br>
-          			I have clearly defined what TRANSITION means to me - both personally and professionally:
+              <p id="selfAwareQText1">Objective - I have clearly defined what TRANSITION means to me - both personally and professionally:
               </p>
               <div class="radio-btn" >
                  <div id="selfAwQ1"></div>
               </div>
           	</div>
             <div class="questions">
-              <p>Desired End State <br>
-          		I can clearly describe what successful TRANSITION looks and feels like:
+              <p id="selfAwareQText2">Desired End State - I can clearly describe what successful TRANSITION looks and feels like:
               </p>
               <div class="radio-btn" >
                  <div id="selfAwQ2"></div>
               </div>
           	</div>
             <div class="questions">
-              <p>Self-Reflection <br>
-          		I have a clear sense of who I am and what really matters to me - both personally and professionally:
+              <p id="selfAwareQText3">Self-Reflection - I have a clear sense of who I am and what really matters to me - both personally and professionally:
               </p>
               <div class="radio-btn" >
                  <div id="selfAwQ3"></div>
               </div>
           	</div>
             <div class="questions">
-              <p>EQ <br>
-          		I am able to use emotional information in an effective and meaningful way:
+              <p id="selfAwareQText4">EQ - I am able to use emotional information in an effective and meaningful way:
               </p>
               <div class="radio-btn" >
                  <div id="selfAwQ4"></div>
               </div>
           	</div>
             <div class="questions">
-              <p>Strengths and Spiritual Wellness <br>
-          		I have identified my talents, my strengths, and the problems I want to solve in the future:
+              <p id="selfAwareQText5">Strengths and Spiritual Wellness - I have identified my talents, my strengths, and the problems I want to solve in the future:
               </p>
               <div class="radio-btn" >
                  <div id="selfAwQ5"></div>
               </div>
           	</div>
             <div class="questions">
-              <p>Values <br>
-            		I have a clear understanding of my personal values to guide my decision making:
+              <p id="selfAwareQText6">Values - I have a clear understanding of my personal values to guide my decision making:
               </p>
               <div class="radio-btn" >
                  <div id="selfAwQ6"></div>
               </div>
           	</div>
             <div class="questions">
-              <p>Priorities<br>
-          		I have developed a personal decision matrix of both personal and professional priorities to guide my decision making:
+              <p id="selfAwareQText7">Priorities - I have developed a personal decision matrix of both personal and professional priorities to guide my decision making:
               </p>
               <div class="radio-btn" >
                  <div id="selfAwQ7"></div>
               </div>
           	</div>
             <div class="questions">
-              <p>I have identified the expectations I have for my actions and those who I chose to spend time with:
+              <p id="selfAwareQText8">I have identified the expectations I have for my actions and those who I chose to spend time with:
               </p>
               <div class="radio-btn" >
                  <div id="selfAwQ8"></div>
@@ -99,19 +91,26 @@
           </div>
           <button type="button" class="submit-btn" onclick="check()">Submit</button>
         </div>
-<!--
-        <div class="step step-2">
-          <p>Self-awareness Area of Focus</p>
-        	<p>Objective <br>
-        			I have clearly defined what TRANSITION means to me - both personally and professionally:
-        	</p>
-          <div class="radio-btn" >
-    			   <div id="selfAwQ1"></div>
-          </div>
-          <button type="button" class="previous-btn">Prev</button>
-          <button type="button" class="next-btn">Next</button>
-      	</div>
+        <div id="download-btn">
+        </div>
 
+        <div class="step step-2">
+          <div class="print-area">
+            <p id="fName"></p>
+            <p id="lName"></p>
+            <p id="self_aware_title" style="font-size:30px;"></p>
+            <p id="print_self_aware_q_1"></p>
+            <p id="print_self_aware_q_2"></p>
+            <p id="print_self_aware_q_3"></p>
+            <p id="print_self_aware_q_4"></p>
+            <p id="print_self_aware_q_5"></p>
+            <p id="print_self_aware_q_6"></p>
+            <p id="print_self_aware_q_7"></p>
+            <p id="print_self_aware_q_8"></p>
+            <p id="print_result"></p>
+          </div>
+      	</div>
+<!--
         <div class="step step-3">
           <p>This are the questions</p>
         	<p>Title of the Question <br>
@@ -127,6 +126,5 @@
       </form>
     </div>
   </section>
-  <script src="main.js"></script>
 </body>
 </html>
