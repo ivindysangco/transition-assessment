@@ -1,0 +1,97 @@
+{
+  padding: 0;
+  margin:0
+  box-sizing:border-box;
+}
+body{
+  font-family: sans-serif;
+}
+section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FCFAEA;
+}
+.container{
+  width: 60%;
+  max-width: 400%;
+  background-color: white;
+  box-shadow: 0px 0px 20px #00000020;
+  padding: 20px;
+  border-radius: 8px;
+}
+.step{
+  display: none;
+}
+.step.active{
+  display: block;
+}
+/*this is the settings for input line labels*/
+.form-group{
+  width: 100%;
+  margin-top: 0px;
+}
+/*this is the settings for input line boxes*/
+.form-group input{
+  width: 100%;
+  border: 1.5px solid rgba(128, 128, 128, 0.418);
+  padding: 5px;
+  font-size: 15px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+/*this is the settings for buttons*/
+button.submit-btn{
+  float: right;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  background-color: rgb(180, 220, 255);
+  font-family: sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+button.dl-btn{
+  float: left;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  background-color: aquamarine;
+  font-family: sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+/*
+button.previous-btn{
+  float: left;
+}
+*/
+.radio-btn {
+  margin: 0 0 0 0;
+  margin-right: 0;
+  margin-left: 30px;
+}
+.questions-group{
+  margin-top: 50px;
+}
+/*this is the settings for section title*/
+.section p{
+  font-size: 20px;
+  text-align: center;
+}
+.questions p{
+  font-size: 15px;
+}
+/*
+.result-area p{
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+*/
