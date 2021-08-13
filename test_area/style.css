@@ -22,10 +22,10 @@ section{
   padding: 20px;
   border-radius: 8px;
 }
-.step{
+.containerDisplay{
   display: none;
 }
-.step.active{
+.containerDisplay.active{
   display: block;
 }
 /*this is the settings for input line labels*/

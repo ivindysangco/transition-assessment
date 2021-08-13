@@ -15,7 +15,7 @@
       <form>
 
         <!--.active class shows the block -->
-        <div class="step step-1 active">
+        <div class="containerDisplay containerDisplay-1 active">
           <div class="form-group">
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName">
@@ -26,99 +26,100 @@
           </div>
 
           <div class="questions-group">
-            <div  id="section_title" class="section">
+            <div  id="container1_self_aware_title" class="section">
               <p>Self-awareness Area of Focus</p>
             </div>
             <div class="questions">
-              <p id="selfAwareQText1">Objective - I have clearly defined what TRANSITION means to me - both personally and professionally:
+              <p id="container1_self_aware_question1">Objective - I have clearly defined what TRANSITION means to me - both personally and professionally:
               </p>
               <div class="radio-btn" >
-                 <div id="selfAwQ1"></div>
+                 <div id="container1_self_aware_radio_btn1"></div>
               </div>
           	</div>
             <div class="questions">
-              <p id="selfAwareQText2">Desired End State - I can clearly describe what successful TRANSITION looks and feels like:
+              <p id="container1_self_aware_question2">Desired End State - I can clearly describe what successful TRANSITION looks and feels like:
               </p>
               <div class="radio-btn" >
-                 <div id="selfAwQ2"></div>
+                 <div id="container1_self_aware_radio_btn2"></div>
               </div>
           	</div>
             <div class="questions">
-              <p id="selfAwareQText3">Self-Reflection - I have a clear sense of who I am and what really matters to me - both personally and professionally:
+              <p id="container1_self_aware_question3">Self-Reflection - I have a clear sense of who I am and what really matters to me - both personally and professionally:
               </p>
               <div class="radio-btn" >
-                 <div id="selfAwQ3"></div>
+                 <div id="container1_self_aware_radio_btn3"></div>
               </div>
           	</div>
             <div class="questions">
-              <p id="selfAwareQText4">EQ - I am able to use emotional information in an effective and meaningful way:
+              <p id="container1_self_aware_question4">EQ - I am able to use emotional information in an effective and meaningful way:
               </p>
               <div class="radio-btn" >
-                 <div id="selfAwQ4"></div>
+                 <div id="container1_self_aware_radio_btn4"></div>
               </div>
           	</div>
             <div class="questions">
-              <p id="selfAwareQText5">Strengths and Spiritual Wellness - I have identified my talents, my strengths, and the problems I want to solve in the future:
+              <p id="container1_self_aware_question5">Strengths and Spiritual Wellness - I have identified my talents, my strengths, and the problems I want to solve in the future:
               </p>
               <div class="radio-btn" >
-                 <div id="selfAwQ5"></div>
+                 <div id="container1_self_aware_radio_btn5"></div>
               </div>
           	</div>
             <div class="questions">
-              <p id="selfAwareQText6">Values - I have a clear understanding of my personal values to guide my decision making:
+              <p id="container1_self_aware_question6">Values - I have a clear understanding of my personal values to guide my decision making:
               </p>
               <div class="radio-btn" >
-                 <div id="selfAwQ6"></div>
+                 <div id="container1_self_aware_radio_btn6"></div>
               </div>
           	</div>
             <div class="questions">
-              <p id="selfAwareQText7">Priorities - I have developed a personal decision matrix of both personal and professional priorities to guide my decision making:
+              <p id="container1_self_aware_question7">Priorities - I have developed a personal decision matrix of both personal and professional priorities to guide my decision making:
               </p>
               <div class="radio-btn" >
-                 <div id="selfAwQ7"></div>
+                 <div id="container1_self_aware_radio_btn7"></div>
               </div>
           	</div>
             <div class="questions">
-              <p id="selfAwareQText8">I have identified the expectations I have for my actions and those who I chose to spend time with:
+              <p id="container1_self_aware_question8">I have identified the expectations I have for my actions and those who I chose to spend time with:
               </p>
               <div class="radio-btn" >
-                 <div id="selfAwQ8"></div>
+                 <div id="container1_self_aware_radio_btn8"></div>
               </div>
           	</div>
           </div>
-          <div class="result-area">
-            <p id="result"></p>
+          <div class="container1_result_area">
+            <p id="container1_self_aware_result"></p>
+            <hr>
           </div>
           <button type="button" class="submit-btn" onclick="check()">Submit</button>
         </div>
         <div id="download-btn">
         </div>
 
-        <div class="step step-2">
-          <div class="print-area">
+        <div class="containerDisplay containerDisplay-2">
+          <div class="pdf_area">
             <p id="fName"></p>
             <p id="lName"></p>
-            <p id="self_aware_title" style="font-size:30px;"></p>
-            <p id="print_self_aware_q_1"></p>
-            <p id="print_self_aware_q_2"></p>
-            <p id="print_self_aware_q_3"></p>
-            <p id="print_self_aware_q_4"></p>
-            <p id="print_self_aware_q_5"></p>
-            <p id="print_self_aware_q_6"></p>
-            <p id="print_self_aware_q_7"></p>
-            <p id="print_self_aware_q_8"></p>
-            <p id="print_result"></p>
+            <p id="container2_self_aware_title" style="font-size:30px;"></p>
+            <p id="container2_self_aware_title_question_1"></p>
+            <p id="container2_self_aware_title_question_2"></p>
+            <p id="container2_self_aware_title_question_3"></p>
+            <p id="container2_self_aware_title_question_4"></p>
+            <p id="container2_self_aware_title_question_5"></p>
+            <p id="container2_self_aware_title_question_6"></p>
+            <p id="container2_self_aware_title_question_7"></p>
+            <p id="container2_self_aware_title_question_8"></p>
+            <p id="container2_print_self_aware_results"></p>
           </div>
       	</div>
 <!--
-        <div class="step step-3">
+        <div class="containerDisplay containerDisplay-3">
           <p>This are the questions</p>
         	<p>Title of the Question <br>
         			This is the question
         	</p>
 
 
-            <div id="selfAwQ1"></div>
+            <div id="container1_self_aware_radio_btn1"></div>
       	  <button type="button" class="previous-btn">Prev</button>
           <button type="button" class="submit-btn">Submit</button>
       	</div>
