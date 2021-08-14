@@ -15,17 +15,17 @@ section{
   background-color: #FCFAEA;
 }
 .container{
-  width: 60%;
+  width: 70%;
   max-width: 400%;
   background-color: white;
   box-shadow: 0px 0px 20px #00000020;
   padding: 20px;
   border-radius: 8px;
 }
-.step{
+.containerDisplay{
   display: none;
 }
-.step.active{
+.containerDisplay.active{
   display: block;
 }
 /*this is the settings for input line labels*/
