@@ -5,7 +5,7 @@ window.onload=function(){
 //creating buttons
 function radioButtonLoop(){
 	var x=1;
-	const selfAware = []; //an array that holds the radio buttons per question
+	const radioButtonArray = []; //an array that holds the radio buttons per question
 	var explore = 5; //explore section has 8 questions
 	var network = 3; //networking section has 8 questions
 	var focus = 4; //focus section has 8 questions
@@ -15,14 +15,27 @@ function radioButtonLoop(){
 	for (var a = 1; a <= 8; a++)
 	{
 		//creating 10 arrays per 1 question
-		selfAware[a] = [];
+		radioButtonArray[a] = [];
 		for (var i=1; i<=10; i++)
 		{
-			selfAware[a] += '<input type="radio" value="' + i + '" name="selfAwareQ' + a + '" class="radio-btn">' + i;
+			radioButtonArray[a] += '<input type="radio" value="' + i + '" name="self_aware_radio_btn' + a + '" class="radio-btn">' + i;
 			//document.getElementById("radioLoop").innerHTML = selfAware[5];
 		}
 		//prints the code from js to html under container1_self_aware_radio_btn
-		document.getElementById("container1_self_aware_radio_btn" + a).innerHTML = selfAware[a];
+		document.getElementById("container1_self_aware_radio_btn" + a).innerHTML = radioButtonArray[a];
+	}
+
+	//for loop to create radio buttons for exploration section
+	for (var a = 1; a <= 5; a++)
+	{
+		//creating 10 arrays per 1 question
+		radioButtonArray[a] = [];
+		for (var i=1; i<=10; i++)
+		{
+			radioButtonArray[a] += '<input type="radio" value="' + i + '" name="exploration_radio_btn' + a + '" class="radio-btn">' + i;
+		}
+		//prints the code from js to html under exploration section
+		document.getElementById("container1_exploration_radio_btn_" + a).innerHTML = radioButtonArray[a];
 	}
 }
 
@@ -37,48 +50,85 @@ function check() {
 
   var selfAwareTitle = document.getElementById("container1_self_aware_title").textContent;
   document.getElementById("container2_self_aware_title").innerHTML = selfAwareTitle;
-
-//  var selfWareQT1 = document.getElementById("container1_self_aware_question1").textContent;
-//  document.getElementById("print-self-aware-q-1").innerHTML = selfWareQT1;
+	var explorationTitle = document.getElementById("container1_exploration_title").textContent;
+  document.getElementById("container2_exploration_title").innerHTML = explorationTitle;
 
 	var selected;
-  var selfAwareQT;
+	var temp_Question;
 	var selfAwareTotal = 0;
 	var selfAwareTRQ = parseFloat(0);
-	var selfAwareColor;
 
 	//loop to get values for self-aware sections with 8 questions
 	for (var i = 1; i <=8; i++)
 	{
     //gets the value of the radio
-		selected =  Array.from(document.getElementsByName("selfAwareQ" + i)).find(radio => radio.checked);
+		selected =  Array.from(document.getElementsByName("self_aware_radio_btn" + i)).find(radio => radio.checked);
     //gets the text of question from container 1
-    selfWareQT = document.getElementById("container1_self_aware_question" + i).textContent;
+    temp_Question = document.getElementById("container1_self_aware_question" + i).textContent;
     //prints the questions to container 2
-    document.getElementById("container2_self_aware_title_question_" + i).innerHTML = selfWareQT + parseInt(selected.value);
+    document.getElementById("container2_self_aware_title_question_" + i).innerHTML = temp_Question + parseInt(selected.value);
     //gets the value of each radio button and add them all up
 		selfAwareTotal += parseInt(selected.value);
-    //prints the total TRQ
-		document.getElementById("container1_self_aware_result").textContent = "SelfAwareTotal is " +  selfAwareTotal;
+    //prints the total TRQ in container 1
+		//document.getElementById("container1_self_aware_result").textContent = "SelfAwareTotal is " +  selfAwareTotal;
 	}
 	selfAwareTRQ = parseFloat(selfAwareTotal / 8 / 2);
-	//result.textContent= 'Self-awareness Transition Readiness Quotient (TRQ) is ' + (selfAwareTotal / 8 / 2);
+	//gets the self-aware results from container 1
 	document.getElementById("container1_self_aware_result").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ;
-  document.getElementById("container2_print_self_aware_results").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ;
+	//input the self-aware results to container 2
+  document.getElementById("container2_self_aware_results").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ;
 	if(selfAwareTRQ <= 2.99)
 	{
 		document.getElementById("container1_self_aware_result").style.color = "red";
-    document.getElementById("container2_print_self_aware_results").style.color = "red";
+    document.getElementById("container2_self_aware_results").style.color = "red";
 	}
 	else if (selfAwareTRQ > 2.99 && selfAwareTRQ <= 3.99)
 	{
 		document.getElementById("container1_self_aware_result").style.color = "orange";
-    document.getElementById("container2_print_self_aware_results").style.color = "orange";
+    document.getElementById("container2_self_aware_results").style.color = "orange";
 	}
 	else if (selfAwareTRQ >3.99 && selfAwareTRQ <= 5)
 	{
 		document.getElementById("container1_self_aware_result").style.color = "green";
-    document.getElementById("container2_print_self_aware_results").style.color = "green";
+    document.getElementById("container2_self_aware_results").style.color = "green";
+	}
+
+	//------------------------------exploration section----------------------------------------//
+	var explorationTotalPoints = 0;
+	var explorationTRQ = parseFloat(0);
+
+	//loop to get values for exloration sections with 5 questions
+	for (var i = 1; i <=5; i++)
+	{
+		//gets the value of the radio
+		selected_exploration =  Array.from(document.getElementsByName("exploration_radio_btn" + i)).find(radio => radio.checked);
+		//gets the text of question from container 1
+		temp_Question = document.getElementById("container1_exploration_question_" + i).textContent;
+		//prints the questions to container 2
+		document.getElementById("container2_exploration_question_" + i).innerHTML = temp_Question + parseInt(selected_exploration.value);
+		//gets the value of each radio button and add them all up
+		explorationTotalPoints += parseInt(selected_exploration.value);
+	}
+	//calculates the TRQ
+	explorationTRQ = parseFloat(explorationTotalPoints / 5 / 2);
+	//gets the self-aware results from container 1
+	document.getElementById("container1_exploration_result").textContent = "Your exploration TRQ is " +  explorationTRQ;
+	//input the self-aware results to container 2
+	document.getElementById("container2_exploration_results").textContent = "Your exploration TRQ is " +  explorationTRQ;
+	if(explorationTRQ <= 2.99)
+	{
+		document.getElementById("container1_exploration_result").style.color = "red";
+		document.getElementById("container2_exploration_results").style.color = "red";
+	}
+	else if (explorationTRQ > 2.99 && explorationTRQ <= 3.99)
+	{
+		document.getElementById("container1_exploration_result").style.color = "orange";
+		document.getElementById("container2_exploration_results").style.color = "orange";
+	}
+	else if (explorationTRQ >3.99 && explorationTRQ <= 5)
+	{
+		document.getElementById("container1_exploration_result").style.color = "green";
+		document.getElementById("container2_exploration_results").style.color = "green";
 	}
 }
 

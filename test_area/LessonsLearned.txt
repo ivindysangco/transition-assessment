@@ -1,0 +1,7 @@
+1. Use browser's inspect to check the flow of the code.
+
+2. Create a flow chart to have a clean naming convention.
+
+3. Use a name that can be easily identified by only looking the code instead of going back and forth in the browser.
+
+4. If you are using underscore at the end of an id, tag, name , or class, make sure you include it when you invoke it in javascript.
