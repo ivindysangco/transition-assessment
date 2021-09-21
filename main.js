@@ -205,7 +205,7 @@ function check() {
 		//gets the value of the radio
 		selected_networking =  Array.from(document.getElementsByName("networking_radio_btn" + i)).find(radio => radio.checked);
 		if (selected_networking == undefined){
-			alert("You missed a button in netoworking area of focus.");
+			alert("You missed a button in networking area of focus.");
 		}
 		//gets the text of question from container 1
 		temp_Question = document.getElementById("container1_networking_question_" + i).textContent;
@@ -254,7 +254,7 @@ function check() {
 		//gets the value of the radio
 		selected_transition_tool_kit =  Array.from(document.getElementsByName("transition_tool_kit_radio_btn" + i)).find(radio => radio.checked);
 		if (selected_transition_tool_kit == undefined){
-			alert("You missed a button transition tool kit area of focus.");
+			alert("You missed a button in personal resilience area of focus.");
 		}
 		//gets the text of question from container 1
 		temp_Question = document.getElementById("container1_transition_tool_kit_question_" + i).textContent;
@@ -302,7 +302,7 @@ function check() {
 		//gets the value of the radio
 		selected_operational =  Array.from(document.getElementsByName("operational_radio_btn" + i)).find(radio => radio.checked);
 		if (selected_operational == undefined){
-			alert("You missed a button operational area of focus.");
+			alert("You missed a button operational planning area of focus.");
 		}
 		//gets the text of question from container 1
 		temp_Question = document.getElementById("container1_operational_question_" + i).textContent;
