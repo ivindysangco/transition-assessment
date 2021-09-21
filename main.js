@@ -119,23 +119,31 @@ function check() {
     //prints the total TRQ in container 1
 		//document.getElementById("container1_self_aware_result").textContent = "SelfAwareTotal is " +  selfAwareTotal;
 	}
-	selfAwareTRQ = parseFloat(selfAwareTotal / 8 / 2);
-	//gets the self-aware results from container 1
-	document.getElementById("container1_self_aware_result").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ;
-	//input the self-aware results to container 2
-  document.getElementById("container2_self_aware_results").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ;
-	if(selfAwareTRQ <= 2.99)
+	selfAwareTRQ = parseFloat(selfAwareTotal / 8);
+
+	if(selfAwareTRQ <= 4.9)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_self_aware_result").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ + ". OFF TRACK:   Focused attention is required to identify what matters to you and how you have defined success.  Schedule some focused time and work through the questions on pages 3 – 5 in this downloadable workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_self_aware_results").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ + ". OFF TRACK: Focused attention is required to identify what matters to you and how you have defined success. Schedule some focused time and work through the questions on pages 3 - 5 in this downloadable workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_self_aware_result").style.color = "red";
     document.getElementById("container2_self_aware_results").style.color = "red";
 	}
-	else if (selfAwareTRQ > 2.99 && selfAwareTRQ <= 3.99)
-	{
+	else if (selfAwareTRQ > 4.9 && selfAwareTRQ <= 7.9)
+	{	//gets the self-aware results from container 1
+		document.getElementById("container1_self_aware_result").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ + ". NEEDS ATTENTION:   Consider answering these two big questions . . . WHAT really matters to you?  And WHY does it matter to you?  Consider scheduling some time and working through the questions on pages 3 -5 in this downloadable workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+	  document.getElementById("container2_self_aware_results").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ + ". NEEDS ATTENTION:   Consider answering these two big questions . . . WHAT really matters to you?  And WHY does it matter to you?  Consider scheduling some time and working through the questions on pages 3 -5 in this downloadable workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_self_aware_result").style.color = "orange";
     document.getElementById("container2_self_aware_results").style.color = "orange";
 	}
-	else if (selfAwareTRQ >3.99 && selfAwareTRQ <= 5)
+	else if (selfAwareTRQ >7.9 && selfAwareTRQ <= 10)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_self_aware_result").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ + ". ON TRACK:  GREAT JOB!  Keep focusing your energy, attention, and effort on what matters most!";
+		//input the self-aware results to container 2
+		document.getElementById("container2_self_aware_results").textContent = "Your self-awareness TRQ is " +  selfAwareTRQ + ". ON TRACK:  GREAT JOB!  Keep focusing your energy, attention, and effort on what matters most!";
 		document.getElementById("container1_self_aware_result").style.color = "green";
     document.getElementById("container2_self_aware_results").style.color = "green";
 	}
@@ -159,23 +167,31 @@ function check() {
 		explorationTotalPoints += parseInt(selected_exploration.value);
 	}
 	//calculates the TRQ
-	explorationTRQ = parseFloat(explorationTotalPoints / 5 / 2);
-	//gets the self-aware results from container 1
-	document.getElementById("container1_exploration_result").textContent = "Your exploration TRQ is " +  explorationTRQ;
-	//input the self-aware results to container 2
-	document.getElementById("container2_exploration_results").textContent = "Your exploration TRQ is " +  explorationTRQ;
-	if(explorationTRQ <= 2.99)
+	explorationTRQ = parseFloat(explorationTotalPoints / 5);
+	if(explorationTRQ <= 4.9)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_exploration_result").textContent = "Your exploration TRQ is " +  explorationTRQ + ". OFF TRACK:  Focused attention is required to identify what matters to you, how you have defined success, and what gives you energy.   Schedule some focused time and work through the questions on pages 3 – 7 in this downloadable workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_exploration_results").textContent = "Your exploration TRQ is " +  explorationTRQ + ". OFF TRACK: Focused attention is required to identify what matters to you, how you have defined sucess, and what gives you energy. Schedule some focused time and work through the questions on pages 3 - 7 in this downloadable workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_exploration_result").style.color = "red";
 		document.getElementById("container2_exploration_results").style.color = "red";
 	}
-	else if (explorationTRQ > 2.99 && explorationTRQ <= 3.99)
+	else if (explorationTRQ > 4.9 && explorationTRQ <= 7.9)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_exploration_result").textContent = "Your exploration TRQ is " +  explorationTRQ + ". NEEDS ATTENTION:   Consider answering the BIG FOUR questions . . . What are your STRENGTHS?  What really ENERGIZES you?  What ISSUES/PROBLEMS MATTER to you?  WHO do you want on your TEAM?  Consider scheduling some focused time and working through the questions on pages 3 – 7 in this downloadable workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_exploration_results").textContent = "Your exploration TRQ is " +  explorationTRQ + ". NEEDS ATTENTION: Consider answering the BIG FOUR questions... What are your STRENGTHS? What really ENERGIZES you? What ISSUES/PROBLEMS MATTER to you? WHO do you want on your TEAM? Consider scheduling some focused time and working through the questions on pages 3 - 7 in this downloadable workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_exploration_result").style.color = "orange";
 		document.getElementById("container2_exploration_results").style.color = "orange";
 	}
-	else if (explorationTRQ >3.99 && explorationTRQ <= 5)
+	else if (explorationTRQ >7.9 && explorationTRQ <= 10)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_exploration_result").textContent = "Your exploration TRQ is " +  explorationTRQ + ". ON TRACK:  GREAT JOB!  Keep making time to identify and focus on what makes a difference for you!";
+		//input the self-aware results to container 2
+		document.getElementById("container2_exploration_results").textContent = "Your exploration TRQ is " +  explorationTRQ + ". ON TRACK:  GREAT JOB!  Keep making time to identify and focus on what makes a difference for you!";
 		document.getElementById("container1_exploration_result").style.color = "green";
 		document.getElementById("container2_exploration_results").style.color = "green";
 	}
@@ -199,23 +215,32 @@ function check() {
 		networkingTotalPoints += parseInt(selected_networking.value);
 	}
 	//calculates the TRQ
-	networkingTRQ = parseFloat(networkingTotalPoints / 3 / 2);
-	//gets the self-aware results from container 1
-	document.getElementById("container1_networking_result").textContent = "Your networking TRQ is " +  networkingTRQ;
-	//input the self-aware results to container 2
-	document.getElementById("container2_networking_results").textContent = "Your networking TRQ is " +  networkingTRQ;
-	if(networkingTRQ <= 2.99)
+	networkingTRQ = parseFloat(networkingTotalPoints / 3);
+
+	if(networkingTRQ <= 4.9)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_networking_result").textContent = "Your networking TRQ is " +  networkingTRQ + ". OFF TRACK:  Focused attention is required to identify WHO needs to be part of your journey moving forward and WHAT ROLES they will play.  Schedule some focused time and work through the questions on pages 8 – 10 in this downloadable workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_networking_results").textContent = "Your networking TRQ is " +  networkingTRQ + ". OFF TRACK: Focused attention is required to identify WHO needs to be part of your journey moving forward and WHAT ROLES they will play. Schedule some focused time and work through the questions on pages 8 - 10 in this downloadable workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_networking_result").style.color = "red";
 		document.getElementById("container2_networking_results").style.color = "red";
 	}
-	else if (networkingTRQ > 2.99 && networkingTRQ <= 3.99)
+	else if (networkingTRQ > 4.9 && networkingTRQ <= 7.9)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_networking_result").textContent = "Your networking TRQ is " +  networkingTRQ + ". NEEDS ATTENTION: Building our Tribe is one of the important parts of any career and life transition. Start with the inner circle - your Quick Reaction Force (QRF) - and move from outward from there. Consider scheduling some focused time and working through the questions on pages 8-10 in this downloadable workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_networking_results").textContent = "Your networking TRQ is " +  networkingTRQ + ". NEEDS ATTENTION: Building our Tribe is one fo the important parts of any career and life transition. Start with the inner circle - your Quick Reaction Force (QRF) - and move from outward from there. Consider scheduling some focused time and working through the questions on pages 8-10 in this downloadable workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_networking_result").style.color = "orange";
 		document.getElementById("container2_networking_results").style.color = "orange";
 	}
-	else if (networkingTRQ >3.99 && networkingTRQ <= 5)
+	else if (networkingTRQ >7.99 && networkingTRQ <= 10)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_networking_result").textContent = "Your networking TRQ is " +  networkingTRQ + ". ON TRACK:  GREAT JOB!  Continue investing in your network so you and those in it are making each other better!";
+		//input the self-aware results to container 2
+		document.getElementById("container2_networking_results").textContent = "Your networking TRQ is " +  networkingTRQ + ". ON TRACK:  GREAT JOB!  Continue investing in your network so you and those in it are making each other better!";
 		document.getElementById("container1_networking_result").style.color = "green";
 		document.getElementById("container2_networking_results").style.color = "green";
 	}
@@ -239,23 +264,31 @@ function check() {
 		transition_tool_kitTotalPoints += parseInt(selected_transition_tool_kit.value);
 	}
 	//calculates the TRQ
-	transition_tool_kitTRQ = parseFloat(transition_tool_kitTotalPoints / 4 / 2);
-	//gets the self-aware results from container 1
-	document.getElementById("container1_transition_tool_kit_result").textContent = "Your transition tool kit TRQ is " +  transition_tool_kitTRQ;
-	//input the self-aware results to container 2
-	document.getElementById("container2_transition_tool_kit_results").textContent = "Your transition tool kit TRQ is " +  transition_tool_kitTRQ;
-	if(transition_tool_kitTRQ <= 2.99)
+	transition_tool_kitTRQ = parseFloat(transition_tool_kitTotalPoints / 4);
+	if(transition_tool_kitTRQ <= 4.9)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_transition_tool_kit_result").textContent = "Your personal resilience TRQ is " +  transition_tool_kitTRQ + ". OFF TRACK:  Focused attention is required to identify a routine that incorporates your MIND, BODY, TRIBE, and your WHY to enable you to have the clarity, focus, and strength to move in a positive direction.  Schedule some focused time and work through the questions on pages 11 – 13 in this downloadable workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_transition_tool_kit_results").textContent = "Your personal resilience TRQ is " +  transition_tool_kitTRQ + ". OFF TRACK: Focused attention is required to identify a routine that incorporates your MIND, BODY, TRIBE, and your WHY to enable you to have the clarity, focus, and strength to move in a positive direction. Schedule some focused time and work through the questions on pages 11 - 13 in this downloadable workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_transition_tool_kit_result").style.color = "red";
 		document.getElementById("container2_transition_tool_kit_results").style.color = "red";
 	}
-	else if (transition_tool_kitTRQ > 2.99 && transition_tool_kitTRQ <= 3.99)
+	else if (transition_tool_kitTRQ > 4.9 && transition_tool_kitTRQ <= 7.99)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_transition_tool_kit_result").textContent = "Your personal resilience TRQ is " +  transition_tool_kitTRQ + ". NEEDS ATTENTION:   Resilience is our ability to bounce forward from our experiences.  A four-part process to consider incorporating into your routine is Mind, Body, Tribe, and WHY.  Mindfulness – Physical Wellness – Social Connection – Spiritual Renewal.  Consider scheduling some focused time and working through the questions on pages 11 – 13 in this downloadable workbook to develop a routine that will work for you:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_transition_tool_kit_results").textContent = "Your personal resilience TRQ is " +  transition_tool_kitTRQ + ". NEEDS ATTENTION: Resilience is our ability to bounce forward from our experiences. A four-part process to consider incorporating into your routine is Mind, Body, Tribe, and WHY. Mindfulness - Physical Wellness - Social Connection - Spiritual Renewal. Consider scheduling some focused time and working through the questions on pages 11 - 13 in 	this downloadable workbook to develop a routine that will work for you: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_transition_tool_kit_result").style.color = "orange";
 		document.getElementById("container2_transition_tool_kit_results").style.color = "orange";
 	}
-	else if (transition_tool_kitTRQ >3.99 && transition_tool_kitTRQ <= 5)
+	else if (transition_tool_kitTRQ >7.99 && transition_tool_kitTRQ <= 10)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_transition_tool_kit_result").textContent = "Your personal resilience TRQ is " +  transition_tool_kitTRQ + ". ON TRACK:  GREAT JOB!  Keep mindfulness, physical wellness, social connection, and spiritual renewal part of daily and weekly routine!";
+		//input the self-aware results to container 2
+		document.getElementById("container2_transition_tool_kit_results").textContent = "Your personal resilience TRQ is " +  transition_tool_kitTRQ + ". ON TRACK:  GREAT JOB!  Keep mindfulness, physical wellness, social connection, and spiritual renewal part of daily and weekly routine!";
 		document.getElementById("container1_transition_tool_kit_result").style.color = "green";
 		document.getElementById("container2_transition_tool_kit_results").style.color = "green";
 	}
@@ -279,23 +312,32 @@ function check() {
 		operational_TotalPoints += parseInt(selected_operational.value);
 	}
 	//calculates the TRQ
-	operational_TRQ = parseFloat(operational_TotalPoints / 6 / 2);
-	//gets the self-aware results from container 1
-	document.getElementById("container1_operational_result").textContent = "Your operational TRQ is " +  operational_TRQ;
-	//input the self-aware results to container 2
-	document.getElementById("container2_operational_results").textContent = "Your operational TRQ is " +  operational_TRQ;
-	if(operational_TRQ <= 2.99)
+	operational_TRQ = parseFloat(operational_TotalPoints / 6);
+
+	if(operational_TRQ <= 4.99)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_operational_result").textContent = "Your operational TRQ is " +  operational_TRQ + ". OFF TRACK:  President Eisenhower once said, “PLANS are USELESS, but PLANNING is ESSENTIAL.  Focused attention is required to start considering a comprehensive plan to start the chapter of your journey.  Schedule some focused time and work through the questions on pages 14 – 16 in this workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_operational_results").textContent = "Your operational TRQ is " +  operational_TRQ + ". OFF TRACK: President Eisenhower once said, \"PLANS are USELESS, but PLANNING is ESSENTIAL. Focused attention is required to start considering a comprehensive plan to start the chapter of your journey. Schedule some focused time and work through the questions on pages 14 - 16 in this workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_operational_result").style.color = "red";
 		document.getElementById("container2_operational_results").style.color = "red";
 	}
-	else if (operational_TRQ > 2.99 && operational_TRQ <= 3.99)
+	else if (operational_TRQ > 4.99 && operational_TRQ <= 7.99)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_operational_result").textContent = "Your operational TRQ is " +  operational_TRQ + ". NEEDS ATTENTION:   General Patton once said, “A good plan violently executed now, is far better than a perfect plan never initiated.”  Consider scheduling some focused time and working through the questions on pages 14 – 16 in this workbook:  https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
+		//input the self-aware results to container 2
+		document.getElementById("container2_operational_results").textContent = "Your operational TRQ is " +  operational_TRQ + ". NEEDS ATTENTION: General Patton once said, \"A good plan violently executed now, is far better than a perfect plan never initiated.\" Condider scheduling some focused time and working through the questions on pages 14 - 16 in this workbook: https://dennis-volpe.com/resources/download-transition-on-purpose-e-book/";
 		document.getElementById("container1_operational_result").style.color = "orange";
 		document.getElementById("container2_operational_results").style.color = "orange";
 	}
-	else if (operational_TRQ >3.99 && operational_TRQ <= 5)
+	else if (operational_TRQ >7.99 && operational_TRQ <= 10)
 	{
+		//gets the self-aware results from container 1
+		document.getElementById("container1_operational_result").textContent = "Your operational TRQ is " +  operational_TRQ + ". ON TRACK:  GREAT JOB!  Keep reflecting on your plan, your reality, and your vision of success and know your plans will change over time.";
+		//input the self-aware results to container 2
+		document.getElementById("container2_operational_results").textContent = "Your operational TRQ is " +  operational_TRQ + ". ON TRACK:  GREAT JOB!  Keep reflecting on your plan, your reality, and your vision of success and know your plans will change over time.";
 		document.getElementById("container1_operational_result").style.color = "green";
 		document.getElementById("container2_operational_results").style.color = "green";
 	}
